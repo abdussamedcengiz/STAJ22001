@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Gallery</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .product-gallery-wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .product-gallery {
+        display: flex;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .product-card {
+        background-color: #ffffff;
+        border-radius: 20px;
+        margin: 10px;
+        padding: 10px;
+        width: 150px;
+        height: 250px;
+        flex: 0 0 auto; /* Prevent flex items from shrinking or growing */
+      }
+
+      .product-card img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      .product-card.active img {
+        transform: scale(1.2);
+      }
+
+      .product-card.active .product-name {
+        font-weight: bold;
+        color: #000;
+      }
+
+      .product-card:hover {
+        z-index: 10;
+      }
+
+      .product-name {
+        margin-top: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: #777;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        border: none;
+        color: white;
+        font-size: 24px;
+        z-index: 50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .carousel-control-prev {
+        left: 10px;
+      }
+
+      .carousel-control-next {
+        right: 10px;
+      }
+
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-5">
+      <h2 class="text-center">Baby Products</h2>
+      <div class="product-gallery-wrapper">
+        <div class="carousel-control-prev" onclick="scrollGallery(-1)">←</div>
+        <div class="carousel-control-next" onclick="scrollGallery(1)">→</div>
+        <div class="product-gallery">
+          <div class="product-card">
+            <img src="images/k.png.webp" alt="babylist" />
+            <div class="product-name">Babylist</div>
+          </div>
+          <div class="product-card">
+            <img src="images/k.png.webp" alt="babylist" />
+            <div class="product-name">Babylist</div>
+          </div>
+          <div class="product-card">
+            <img src="images/k.png.webp" alt="babylist" />
+            <div class="product-name">Babylist</div>
+          </div>
+          <div class="product-card">
+            <img src="images/k.png.webp" alt="babylist" />
+            <div class="product-name">Babylist</div>
+          </div>
+          <div class="product-card">
+            <img src="images/k.png.webp" alt="babylist" />
+            <div class="product-name">Babylist</div>
+          </div>
+          <div class="product-card">
+            <img src="images/k.png.webp" alt="babylist" />
+            <div class="product-name">Babylist</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      var currentIndex = 0;
+      var cardWidth = $(".product-card").outerWidth(true); // Includes margin
+      var gallery = $(".product-gallery");
+      var totalCards = $(".product-card").length;
+
+      function updateActiveCard() {
+        $(".product-card").removeClass("active");
+        var cards = $(".product-card");
+        $(cards[currentIndex]).addClass("active");
+      }
+
+      function scrollGallery(direction) {
+        var scrollAmount = cardWidth; // Adjusted for spacing
+
+        // Update current index
+        currentIndex = (currentIndex + direction + totalCards) % totalCards;
+
+        // Center the gallery on the current card
+        gallery.css(
+          "transform",
+          `translateX(${
+            -currentIndex * scrollAmount + (gallery.width() / 2 - cardWidth / 2)
+          }px)`
+        );
+
+        updateActiveCard();
+      }
+
+      $(document).ready(function () {
+        // Center the gallery on the initial card
+        gallery.css(
+          "transform",
+          `translateX(${
+            -currentIndex * cardWidth + (gallery.width() / 2 - cardWidth / 2)
+          }px)`
+        );
+        updateActiveCard();
+      });
+    </script>
+  </body>
+</html>

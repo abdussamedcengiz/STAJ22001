@@ -1,0 +1,1988 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rascals</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/footor.css" />
+
+    <link rel="stylesheet" href="css/section.css" />
+    <!-- <link rel="stylesheet" href="css/babylist.css" /> -->
+    <!-- <link rel="stylesheet" href="css/animation.css" /> -->
+    <style>
+      @keyframes scrollToLeft {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 50%;
+  }
+}
+@keyframes scrollToRight {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 50%;
+  }
+}
+    </style>
+    <style>
+      .custom-hr {
+        border: 1px solid rgba(0, 0, 0, 0.269);
+        margin: 20px 0; /* Üst ve alt boşluk */
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="top-bar d-flex justify-content-center align-items-center p-0 bg-light"
+    >
+      <div class="language-selection w-100 text-center">
+        <span class="text-bg-primary p-3"
+          >New look, same Rascal + Friends <a style="
+          color:blueviolet ;
+          text-decoration: none;" href="#"> Meet Rascals →</a>
+          
+        
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="images/Rascals.dde54c3a (1).svg" alt="Rascals Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active ml-2">
+            <a class="nav-link" href="#">Describe</a>
+          </li>
+          <li class="nav-item active ml-2">
+            <a class="nav-link" href="#">Training pants</a>
+          </li>
+
+          <li class="nav-item active mb-2">
+            <a class="nav-link" href="#" id="wipesMenu">
+              Wipes
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-down"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                />
+              </svg>
+            </a>
+            <div class="submenu" id="wipesSubmenu">
+              <a href="#">Option 1</a>
+              <a href="#">Option 2</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="navbar-brand me-2" href="#">
+              <img src="images/CocomelonLogo.avif" alt=" Logo" />
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Size Guide</a>
+          </li>
+        </ul>
+      </div>
+      <a class="navbar-brand" href="#">
+        
+        <div class="continue-btn">
+         
+          <span class="text-bg-primary p-3">
+            
+            <i  class="bi bi-globe2"></i>
+            <svg xmlns="http://www.w3.org/2000/svg"  width="18" height="20" fill="rgba(0, 0, 0, 0.5)" class="bi bi-globe2" viewBox="0 0 16 16">
+              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+            </svg>
+            
+            United States</span>
+          <button class="btn btn-primary">
+            Shop <i class=""></i>
+          </button>
+          <div class="submenu">
+            <a href="#">Option 1</a>
+            <a href="#">Option 2</a>
+          </div>
+        </div>
+      </a>
+    </nav>
+    <div class="hero">
+      <video
+        class="video--element"
+        id="businessIntro"
+        playsinline
+        disableRemotePlayback
+        preload="auto"
+        muted
+        loop
+        autoplay
+      >
+        <source src="images/high.mp4" type="video/mp4" />
+      </video>
+      <div
+        class="container d-flex align-items-center justify-content-center"
+        style="height: 100%; margin-left: 13%"
+      >
+        <div class="text-center">
+          <h1>Meet Rascals</h1>
+          <p>The best at containing the mess</p>
+          <a href="#products" class="btn btn-primary">View Products →</a>
+        </div>
+      </div>
+    </div>
+    <!-- Info Bar -->
+
+    <hr />
+    <!-- Info Bar -->
+
+    <section class="award-winning-products py-5">
+      <div class="container my-5">
+        <h2 class="text-center">Baby Products</h2>
+        <div class="carousel-control-wrapper">
+          <a
+            class="carousel-control-prev"
+            href="#productCarousel"
+            role="button"
+            data-slide="prev"
+            style="
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 40px;
+              height: 40px;
+              background-color: rgba(0, 0, 0, 0.5);
+              border-radius: 50%;
+              border: none;
+              color: white;
+              font-size: 24px;
+              z-index: 50;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              left: 1200px;
+              margin-top: 610px;
+            "
+          >
+            <span class="arrow">←</span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#productCarousel"
+            role="button"
+            data-slide="next"
+            style="
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 40px;
+              height: 40px;
+              background-color: rgba(0, 0, 0, 0.5);
+              border-radius: 50%;
+              border: none;
+              color: white;
+              font-size: 24px;
+              z-index: 50;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              right: 200px;
+              margin-top: 610px;
+            "
+          >
+            <span class="arrow">→</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <div
+          id="productCarousel"
+          class="carousel slide"
+          data-ride="carousel"
+          data-interval="false"
+        >
+          <div class="carousel-inner">
+            <div
+              class="carousel-item active"
+              style="text-align: center; border-radius: 40px"
+            >
+              <div class="row">
+                <div class="col-md-6">
+                  <div
+                    class="card product-card"
+                    style="
+                      background-color: #ffffff;
+                      border-radius: 20px;
+                      margin-bottom: 10px;
+                      transition: transform 0.3s ease-in-out;
+                    "
+                  >
+                    <div
+                      class="video-container"
+                      style="
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 20px;
+                      "
+                    >
+                      <div
+                        class="rascals-header"
+                        style="
+                          position: absolute;
+                          top: 20px;
+                          left: 20px;
+                          background-color: rgb(207, 241, 235);
+                          padding: 5px 10px;
+                          font-size: 10px;
+                          border-radius: 50px;
+                        "
+                      >
+                        Our #1 Absorbing Diaper
+                      </div>
+                      <video
+                        class="video--element"
+                        id="businessIntro"
+                        playsinline="true"
+                        disableremoteplayback="true"
+                        preload="auto"
+                        muted=""
+                        loop=""
+                        style="width: 100%; height: auto"
+                      >
+                        <source
+                          src="images/high (1).mp4.mp4"
+                          type="video/mp4;"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer"
+                    style="
+                      background-color: #ffffff;
+                      padding: 10px;
+                      text-align: left;
+                      margin-top: -10px;
+                      border-radius: 20px;
+                    "
+                  >
+                    <p
+                      class="small-text underline"
+                      style="
+                        font-size: 12px;
+                        position: relative;
+                        padding-left: 80px;
+                        text-decoration: underline;
+                      "
+                    >
+                      4.5/5 based on 17249 reviews
+                      <span class="stars" style="margin-right: 5px; font-size: 12px; line-height: 1; white-space: nowrap; color: #ffd700;">
+                        
+                    </span>
+                      >
+                    </p>
+                    <h5 class="card-title">Premium Diapers</h5>
+                    <p class="card-text">From $19.97</p>
+                    <a
+                      href="#"
+                      class="btn btn-primary"
+                      style="
+                        background-color: rgb(136, 103, 212);
+                        border: none;
+                        color: white;
+                        display: inline-flex;
+                        align-items: center;
+                      "
+                    >
+                      Shop Now
+                      <span
+                        class="arrow"
+                        style="
+                          margin-left: 5px;
+                          transition: margin-left 0.3s ease-in-out;
+                          position: sticky;
+                        "
+                        >→</span
+                      >
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 position-relative">
+                  <div
+                    class="card product-card"
+                    style="
+                      background-color: #ffffff;
+                      border-radius: 20px;
+                      margin-bottom: 10px;
+                      transition: transform 0.3s ease-in-out;
+                    "
+                  >
+                    <div
+                      class="video-container"
+                      style="
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 20px;
+                      "
+                    >
+                      <div
+                        class="rascals-header"
+                        style="
+                          position: absolute;
+                          top: 20px;
+                          left: 20px;
+                          background-color: rgb(207, 241, 235);
+                          padding: 5px 10px;
+                          font-size: 10px;
+                          border-radius: 50px;
+                        "
+                      >
+                        Our #1 Absorbing Diaper
+                      </div>
+                      <video
+                        class="video--element"
+                        id="businessIntro"
+                        playsinline="true"
+                        disableremoteplayback="true"
+                        preload="auto"
+                        muted=""
+                        loop=""
+                        style="width: 100%; height: auto"
+                      >
+                        <source
+                          src="images/high (1).mp4.mp4"
+                          type="video/mp4;"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer"
+                    style="
+                      background-color: #ffffff;
+                      padding: 10px;
+                      text-align: left;
+                      margin-top: -10px;
+                      border-radius: 20px;
+                    "
+                  >
+                    <p
+                      class="small-text underline"
+                      style="
+                        font-size: 12px;
+                        position: relative;
+                        padding-left: 80px;
+                        text-decoration: underline;
+                      "
+                    >
+                      4.7/5 based on 3701 reviews
+                      <span class="stars" style="margin-right: 5px; font-size: 12px; line-height: 1; white-space: nowrap; color: #ffd700;">
+                   
+                    </span>
+                      >
+                    </p>
+                    <h5 class="card-title">CoComelon Premium Training Pants</h5>
+                    <p class="card-text">From $19.97</p>
+                    <a
+                      href="#"
+                      class="btn btn-primary"
+                      style="
+                        background-color: rgb(136, 103, 212);
+                        border: none;
+                        color: white;
+                        display: inline-flex;
+                        align-items: center;
+                      "
+                    >
+                      Shop Now
+                      <span
+                        class="arrow"
+                        style="
+                          margin-left: 5px;
+                          transition: margin-left 0.3s ease-in-out;
+                          position:sticky;
+                        "
+                        >→</span
+                      >
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="carousel-item"
+              style="text-align: center; border-radius: 40px"
+            >
+              <div class="row">
+                <div class="col-md-6">
+                  <div
+                    class="card product-card"
+                    style="
+                      background-color: #ffffff;
+                      border-radius: 20px;
+                      margin-bottom: 10px;
+                      transition: transform 0.3s ease-in-out;
+                    "
+                  >
+                    <div
+                      class="video-container"
+                      style="
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 20px;
+                      "
+                    >
+                      <div
+                        class="rascals-header"
+                        style="
+                          position: absolute;
+                          top: 20px;
+                          left: 20px;
+                          background-color: rgb(207, 241, 235);
+                          padding: 5px 10px;
+                          font-size: 10px;
+                          border-radius: 50px;
+                        "
+                      >
+                        Our #1 Absorbing Diaper
+                      </div>
+                      <video
+                        class="video--element"
+                        id="businessIntro"
+                        playsinline="true"
+                        disableremoteplayback="true"
+                        preload="auto"
+                        muted=""
+                        loop=""
+                        style="width: 100%; height: auto"
+                      >
+                        <source src="images/high.mp4.mp4" type="video/mp4;" />
+                      </video>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer"
+                    style="
+                      background-color: #ffffff;
+                      padding: 10px;
+                      text-align: left;
+                      margin-top: -10px;
+                      border-radius: 20px;
+                    "
+                  >
+                    <p
+                      class="small-text underline"
+                      style="
+                        font-size: 12px;
+                        position: relative;
+                        padding-left: 80px;
+                        text-decoration: underline;
+                      "
+                    >
+                      4.8/5 based on 6500 reviews
+                      <span class="stars" style="margin-right: 5px; font-size: 12px; line-height: 1; white-space: nowrap; color: #ffd700;">
+                  
+                    </span>
+                      >
+                    </p>
+                    <h5 class="card-title">Our Strongest Wipe</h5>
+                    <p class="card-text">From $19.97</p>
+                    <a
+                      href="#"
+                      class="btn btn-primary"
+                      style="
+                        background-color: rgb(136, 103, 212);
+                        border: none;
+                        color: white;
+                        display: inline-flex;
+                        align-items: center;
+                      "
+                    >
+                      Shop Now
+                      <span
+                        class="arrow"
+                        style="
+                          margin-left: 5px;
+                          transition: margin-left 0.3s ease-in-out;
+                           position:sticky;
+                        "
+                        >→</span
+                      >
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 position-relative">
+                  <div
+                    class="card product-card"
+                    style="
+                      background-color: #ffffff;
+                      border-radius: 20px;
+                      margin-bottom: 10px;
+                      transition: transform 0.3s ease-in-out;
+                    "
+                  >
+                    <div
+                      class="video-container"
+                      style="
+                        position: relative;
+                        overflow: hidden;
+                        border-radius: 20px;
+                      "
+                    >
+                      <div
+                        class="rascals-header"
+                        style="
+                          position: absolute;
+                          top: 20px;
+                          left: 20px;
+                          background-color: rgb(207, 241, 235);
+                          padding: 5px 10px;
+                          font-size: 10px;
+                          border-radius: 50px;
+                        "
+                      >
+                        Our #1 Absorbing Diaper
+                      </div>
+                      <video
+                        class="video--element"
+                        id="businessIntro"
+                        playsinline="true"
+                        disableremoteplayback="true"
+                        preload="auto"
+                        muted=""
+                        loop=""
+                        style="width: 100%; height: auto"
+                      >
+                        <source
+                          src="images/high (1).mp4.mp4"
+                          type="video/mp4;"
+                        />
+                      </video>
+                    </div>
+                  </div>
+                  <div
+                    class="card-footer"
+                    style="
+                      background-color: #ffffff;
+                      padding: 14px;
+                      text-align: left;
+                      margin-top: -10px;
+                      border-radius: 20px;
+                    "
+                  >
+                    <p
+                      class="small-text underline"
+                      style="
+                        font-size: 12px;
+                        position: relative;
+                        padding-left: 90px;
+                        text-decoration: underline;
+                      "
+                    >
+                      4.9/5 based on 7200 reviews
+                      <span class="stars" style="margin-right: 5px; font-size: 12px; line-height: 1; white-space: nowrap; color: #ffd700;">
+                      
+                    </span>
+                      >
+                    </p>
+                    <h5 class="card-title">Our Cleanest Wipe</h5>
+                    <p class="card-text">From $19.97</p>
+                    <a
+                      href="#"
+                      class="btn btn-primary"
+                      style="
+                        background-color: rgb(136, 103, 212);
+                        border: none;
+                        color: white;
+                        display: inline-flex;
+                        align-items: center;
+                      "
+                    >
+                      Shop Now
+                      <span
+                        class="arrow"
+                        style="
+                          margin-left: 5px;
+                          transition: margin-left 0.3s ease-in-out;
+                          position:sticky;
+                        "
+                        >→</span
+                      >
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr />
+    <section style="padding: 0; margin: 0">
+      <div class="container-fluid p-0" style="padding: 0; margin: 0">
+        <div class="row no-gutters" style="margin: 0">
+          <div
+            class="col-md-6 d-flex flex-column justify-content-center"
+            style="text-align: center; padding: 80px"
+          >
+            <h2>The best at containing the mess</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est sit
+              voluptas, veritatis repellat voluptate magnam expedita nulla, esse
+              nostrum, quaerat cumque optio iste saepe! Quo quam eaque ipsam
+              nisi ab.
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus id
+              voluptates repudiandae corporis nulla molestiae facilis cumque
+              voluptas necessitatibus, at eligendi commodi placeat quod
+              recusandae modi ab, incidunt nobis! Corporis.
+            </p>
+            <div
+              class="btn-container"
+              style="text-align: start; margin-top: 20px"
+            >
+              <a
+                href="products.html"
+                class="btn btn-primary"
+                style="
+                  font-size: 0.8rem;
+                  padding: 5px 15px;
+                  border-radius: 5px;
+                  display: inline-block;
+                  text-align: center;
+                  background-color: rgb(136, 103, 212);
+                  border: none;
+                  color: white;
+                "
+                >Shop Premium Diapers</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 p-0" style="padding: 0">
+            <img
+              src="images/ss.png.webp"
+              class="img-fluid"
+              alt="Child in Diaper"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 0;
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 0; margin: 0">
+      <div class="container-fluid p-0" style="padding: 0; margin: 0">
+        <div class="row no-gutters" style="margin: 0">
+          <div class="col-md-6 p-0" style="padding: 0">
+            <img
+              src="images/ss.png.webp"
+              class="img-fluid"
+              alt="Child in Diaper"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 0;
+              "
+            />
+          </div>
+          <div
+            class="col-md-6 d-flex flex-column justify-content-center"
+            style="text-align: center; padding: 80px;"
+          >
+            <h2>The best at containing the mess</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est sit
+              voluptas, veritatis repellat voluptate magnam expedita nulla, esse
+              nostrum, quaerat cumque optio iste saepe! Quo quam eaque ipsam
+              nisi ab.
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus id
+              voluptates repudiandae corporis nulla molestiae facilis cumque
+              voluptas necessitatibus, at eligendi commodi placeat quod
+              recusandae modi ab, incidunt nobis! Corporis.
+            </p>
+            <div
+              class="btn-container"
+              style="text-align: start; margin-top: 20px"
+            >
+              <a
+                href="products.html"
+                class="btn btn-primary"
+                style="
+                  font-size: 0.8rem;
+                  padding: 5px 15px;
+                  border-radius: 5px;
+                  display: inline-block;
+                  text-align: center;
+                  background-color: rgb(136, 103, 212);
+                  border: none;
+                  color: white;
+                 
+                "
+                >Shop Premium Diapers</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 0; margin: 0">
+      <div class="container-fluid p-0" style="padding: 0; margin: 0">
+      
+        <div class="row no-gutters" style="margin: 0">
+          <div
+            class="col-md-6 d-flex flex-column justify-content-end"
+            style="text-align: center; padding: 80px"
+          >
+          <div
+          class="content-item"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+          >
+          <h5 class="mb-0">Our #1 Absorbing Diaper<sup>TM</sup></h5>
+          <button
+            class="btn btn-link p-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#content1"
+            aria-expanded="false"
+            aria-controls="content1"
+            style="color: black;font-size: 25px;"
+          >
+            +
+          </button>
+          </div>
+          
+          <hr class="custom-hr" />
+          <div
+          class="content-item"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+          >
+          <h5 class="mb-0">
+            Unique Hydrolock Core<sup>TM</sup> Technology
+          </h5>
+          <button
+            class="btn btn-link p-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#content2"
+            aria-expanded="false"
+            aria-controls="content2"
+            style="color: black;
+            font-size: 25px;"
+          >
+            +
+          </button>
+          </div>
+          <hr class="custom-hr" />
+          <div
+          class="content-item"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+          >
+          <h5 class="mb-0">Pediatrician Recommended</h5>
+          <button
+            class="btn btn-link p-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#content3"
+            aria-expanded="false"
+            aria-controls="content3"
+            style="color: black;font-size: 25px;"
+          >
+            +
+          </button>
+          </div>
+          <hr class="custom-hr" />
+          <div
+          class="content-item"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          "
+          >
+          <h5 class="mb-0">0% Lotions, Latex or Fragrance</h5>
+          <button
+            class="btn btn-link p-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#content4"
+            aria-expanded="false"
+            aria-controls="content4"
+            style="color: black;
+            font-size: 25px;
+            "
+          >
+            +
+          </button>
+          </div>
+          <hr class="custom-hr" />
+          </div>
+          <div class="col-md-6 p-0" style="padding: 0">
+            <img
+              src="images/ss.png.webp"
+              class="img-fluid"
+              alt="Child in Diaper"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 0;
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <!-- Navbar -->
+
+    <!-- Awards Section -->
+    <section class="text-center mt-5" >
+      <div  class="container-fluid mt-5" >
+        <h2 class="text-center" >Baby Products</h2>
+        <div style="position: relative; overflow: hidden; width: 100%;">
+          <div
+            style="
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 40px;
+              height: 40px;
+              background-color: rgba(0, 0, 0, 0.5);
+              border-radius: 50%;
+              border: none;
+              color: white;
+              font-size: 24px;
+              z-index: 50;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+              left: 10px;
+              
+            "
+            onclick="scrollGallery(-1)"
+          >
+            ←
+          </div>
+          <div
+            style="
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 40px;
+              height: 40px;
+              background-color: rgba(0, 0, 0, 0.5);
+              border-radius: 50%;
+              border: none;
+              color: white;
+              font-size: 24px;
+              z-index: 50;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+              right: 10px;
+            "
+            onclick="scrollGallery(1)"
+          >
+            →
+          </div>
+          <div
+            style="
+              display: flex;
+              overflow: hidden;
+              scroll-behavior: smooth;
+              transition: transform 0.5s ease-in-out;
+              padding: 50px;
+            "
+            class="product-gallery"
+          >
+            <!-- 6 Product Cards -->
+            <div
+              style="
+                background-color: #ffffff;
+                border-radius: 20px;
+                margin: 10px;
+                padding: 10px;
+                width: 150px;
+                height: 250px;
+                flex: 0 0 auto;
+                transition: transform 0.5s ease, z-index 0.5s ease;
+              "
+              class="item-card"
+            >
+              <img
+                src="images/k.png.webp"
+                alt="babylist"
+                style="
+                  max-width: 100%;
+                  height: auto;
+                  transition: transform 0.3s ease-in-out;
+                  cursor: pointer;
+                "
+              />
+              <div
+                style="
+                  margin-top: 10px;
+                  font-size: 14px;
+                  text-align: center;
+                  color: #777;
+                  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                "
+                class="product-name"
+              >
+                Babylist 1
+              </div>
+            </div>
+            <div
+              style="
+                background-color: #ffffff;
+                border-radius: 20px;
+                margin: 10px;
+                padding: 10px;
+                width: 150px;
+                height: 250px;
+                flex: 0 0 auto;
+                transition: transform 0.5s ease, z-index 0.5s ease;
+              "
+              class="item-card"
+            >
+              <img
+                src="images/k.png.webp"
+                alt="babylist"
+                style="
+                  max-width: 100%;
+                  height: auto;
+                  transition: transform 0.3s ease-in-out;
+                  cursor: pointer;
+                "
+              />
+              <div
+                style="
+                  margin-top: 10px;
+                  font-size: 14px;
+                  text-align: center;
+                  color: #777;
+                  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                "
+                class="product-name"
+              >
+                Babylist 2
+              </div>
+            </div>
+            <div
+              style="
+                background-color: #ffffff;
+                border-radius: 20px;
+                margin: 10px;
+                padding: 10px;
+                width: 150px;
+                height: 250px;
+                flex: 0 0 auto;
+                transition: transform 0.5s ease, z-index 0.5s ease;
+              "
+              class="item-card"
+            >
+              <img
+                src="images/k.png.webp"
+                alt="babylist"
+                style="
+                  max-width: 100%;
+                  height: auto;
+                  transition: transform 0.3s ease-in-out;
+                  cursor: pointer;
+                "
+              />
+              <div
+                style="
+                  margin-top: 10px;
+                  font-size: 14px;
+                  text-align: center;
+                  color: #777;
+                  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                "
+                class="product-name"
+              >
+                Babylist 3
+              </div>
+            </div>
+            <div
+              style="
+                background-color: #ffffff;
+                border-radius: 20px;
+                margin: 10px;
+                padding: 10px;
+                width: 150px;
+                height: 250px;
+                flex: 0 0 auto;
+                transition: transform 0.5s ease, z-index 0.5s ease;
+              "
+              class="item-card"
+            >
+              <img
+                src="images/k.png.webp"
+                alt="babylist"
+                style="
+                  max-width: 100%;
+                  height: auto;
+                  transition: transform 0.3s ease-in-out;
+                  cursor: pointer;
+                "
+              />
+              <div
+                style="
+                  margin-top: 10px;
+                  font-size: 14px;
+                  text-align: center;
+                  color: #777;
+                  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                "
+                class="product-name"
+              >
+                Babylist 4
+              </div>
+            </div>
+            <div
+              style="
+                background-color: #ffffff;
+                border-radius: 20px;
+                margin: 10px;
+                padding: 10px;
+                width: 150px;
+                height: 250px;
+                flex: 0 0 auto;
+                transition: transform 0.5s ease, z-index 0.5s ease;
+              "
+              class="item-card"
+            >
+              <img
+                src="images/k.png.webp"
+                alt="babylist"
+                style="
+                  max-width: 100%;
+                  height: auto;
+                  transition: transform 0.3s ease-in-out;
+                  cursor: pointer;
+                "
+              />
+              <div
+                style="
+                  margin-top: 10px;
+                  font-size: 14px;
+                  text-align: center;
+                  color: #777;
+                  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                "
+                class="product-name"
+              >
+                Babylist 5
+              </div>
+            </div>
+            <div
+              style="
+                background-color: #ffffff;
+                border-radius: 20px;
+                margin: 10px;
+                padding: 10px;
+                width: 150px;
+                height: 250px;
+                flex: 0 0 auto;
+                transition: transform 0.5s ease, z-index 0.5s ease;
+              "
+              class="item-card"
+            >
+              <img
+                src="images/k.png.webp"
+                alt="babylist"
+                style="
+                  max-width: 100%;
+                  height: auto;
+                  transition: transform 0.3s ease-in-out;
+                  cursor: pointer;
+                "
+              />
+              <div
+                style="
+                  margin-top: 10px;
+                  font-size: 14px;
+                  text-align: center;
+                  color: #777;
+                  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                "
+                class="product-name"
+              >
+                Babylist 6
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr   />
+    <div class="container-fluid mt-5"  >
+      <!-- Üstte sola kayan resimler -->
+      <div
+        class="scrolling-container top-scrolling"
+        style="
+          height: 200px;
+          overflow: hidden;
+          position: relative;
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          width: 100vw;
+        "
+      >
+        <div
+          class="scrolling-content"
+          style="
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            width: 200vw;
+            animation: scrollToLeft 60s linear infinite;
+          "
+        >
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 1"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 2"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 3"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 4"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 5"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 6"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 7"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 8"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 1"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 2"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 3"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 4"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 5"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 6"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 7"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 8"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 9"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 10"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 11"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 12"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+          src="images/kr.png.webp"
+          class="d-block"
+          alt="Image 13"
+          style="
+            width: 185px;
+            height: 185px;
+            margin: 10px;
+            border-radius: 10%;
+          "
+        />
+        <img
+        src="images/kr.png.webp"
+        class="d-block"
+        alt="Image 14"
+        style="
+          width: 185px;
+          height: 185px;
+          margin: 10px;
+          border-radius: 10%;
+        "
+      />
+        </div>
+      </div>
+      <!-- Altta sağa kayan resimler -->
+      <div
+        class="scrolling-container bottom-scrolling"
+        style="
+          height: 200px;
+          overflow: hidden;
+          position: relative;
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+          width: 100vw;
+        "
+      >
+        <div
+          class="scrolling-content"
+          style="
+            display: flex;
+            flex-direction: row;
+            position: absolute;
+            width: 200vw;
+            animation: scrollToRight 60s linear infinite;
+          "
+        >
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 9"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 10"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 11"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 12"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 13"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 14"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 15"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 16"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 9"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 10"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 11"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 12"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 13"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 14"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 15"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+            src="images/kr.png.webp"
+            class="d-block"
+            alt="Image 16"
+            style="
+              width: 185px;
+              height: 185px;
+              margin: 10px;
+              border-radius: 10%;
+            "
+          />
+          <img
+          src="images/kr.png.webp"
+          class="d-block"
+          alt="Image 17"
+          style="
+            width: 185px;
+            height: 185px;
+            margin: 10px;
+            border-radius: 10%;
+          "
+        />
+        <img
+        src="images/kr.png.webp"
+        class="d-block"
+        alt="Image 18"
+        style="
+          width: 185px;
+          height: 185px;
+          margin: 10px;
+          border-radius: 10%;
+        "
+      />
+        </div>
+      </div>
+    </div>
+    <hr />
+    <footer class="text-white pt-4 pb-4" style="background-color: #003a48">
+      <div class="container position-relative">
+        <div class="row button-container">
+          <h1 style="padding: 30px">Shop Rascals at Walmart</h1>
+
+          <div class="col-md-12">
+            <button
+              type="button"
+              class="btn btn-secondary btn-lg"
+              style="background-color: #7e5ccb"
+            >
+              Buy Online →
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary btn-lg"
+              style="background-color: #003a48"
+            >
+              Store Finder →
+            </button>
+          </div>
+        </div>
+        <div class="horizontal-divider"></div>
+        <div class="row position-relative divider-container">
+          <div class="col-md-5 center-content footer-section">
+            <form>
+              <div class="input-group mb-3">
+                <span class="text-bg-primary p-3" style="margin-top: 10px"
+                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Nihil incidunt
+                </span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Your Email"
+                  aria-label="Enter Your Email"
+                  aria-describedby="button-addon2"
+                  style="
+                  background-color: #003a48;
+                  height: 60px;
+                  border-radius: 5px;"
+                />
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  class="button-addon2"
+                  style="border-radius: 5px;"
+                >
+                  <span class="arrow">→</span>
+                </button>
+                <span class="text-bg-primary p-3"
+                  >Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Nihil incidunt
+                </span>
+              </div>
+            </form>
+          </div>
+
+          <div class="center-divider"></div>
+
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-4 footer-section">
+                <h5 class="text-uppercase mb-4 font-weight-bold">Shop</h5>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >All Products</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Premium Diapers</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Premium Training Pants</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Premium Sensitive Wipes</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >99% Water Premium Wipes</a
+                  >
+                </p>
+              </div>
+              <div class="col-md-2 footer-section">
+                <h5 class="text-uppercase mb-4 font-weight-bold">About</h5>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Meet Rascals</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >About</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Reviews</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Blog</a
+                  >
+                </p>
+              </div>
+              <div class="col-md-4 footer-section">
+                <h5 class="text-uppercase mb-4 font-weight-bold">Help</h5>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Contact Us</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >FAQs</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Size Guide</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Diaper Size Quiz</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Money Back Guarantee</a
+                  >
+                </p>
+              </div>
+              <div class="col-md-2 footer-section">
+                <h5 class="text-uppercase mb-4 font-weight-bold">Social</h5>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Instagram</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >TikTok</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Facebook</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white" style="text-decoration: none"
+                    >Pinterest</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="horizontal-divider"></div>
+        <div class="rascals-text rascals-container">
+          <a class="navbar-brandd" href="#">
+            <img src="images/Rascals.dde54c3a (1).svg" alt="Rascals Logo" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".video-container").hover(
+          function () {
+            $(this).find("video")[0].play();
+          },
+          function () {
+            $(this).find("video")[0].pause();
+            $(this).find("video")[0].currentTime = 0;
+          }
+        );
+      });
+    </script>
+ 
+    <script>
+      $(document).ready(function () {
+        // Toggle submenu when clicking wipesMenu
+        $("#wipesMenu").click(function (e) {
+          e.preventDefault();
+          $("#wipesSubmenu").toggle();
+        });
+
+        // Close submenu when clicking outside
+        $(document).click(function (e) {
+          var target = e.target;
+          if (
+            !$(target).is("#wipesMenu") &&
+            !$(target).closest("#wipesSubmenu").length
+          ) {
+            $("#wipesSubmenu").hide();
+          }
+        });
+
+        // Change navbar text color on scroll
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 100) {
+            $(".navbar").addClass("scrolled");
+            $(".nav-link").addClass("scrolled");
+            $(".text-bg-primary").addClass("scrolled");
+          } else {
+            $(".navbar").removeClass("scrolled");
+            $(".nav-link").removeClass("scrolled");
+            $(".text-bg-primary").removeClass("scrolled");
+          }
+        });
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      var currentIndex = 0;
+      var cardWidth = $(".item-card").outerWidth(true); // Includes margin
+      var gallery = $(".product-gallery");
+      var totalCards = $(".item-card").length;
+
+      function updateActiveCard() {
+        $(".item-card").each(function (index) {
+          $(this).css({
+            transform: index === currentIndex ? "scale(1.2)" : "scale(1)",
+            zIndex: index === currentIndex ? "10" : "1",
+          });
+        });
+      }
+
+      function scrollGallery(direction) {
+        var scrollAmount = cardWidth; // Adjusted for spacing
+
+        // Update current index
+        currentIndex = (currentIndex + direction + totalCards) % totalCards;
+
+        // Center the gallery on the current card
+        gallery.css(
+          "transform",
+          `translateX(${
+            -currentIndex * scrollAmount + (gallery.width() / 2 - cardWidth / 2)
+          }px)`
+        );
+
+        updateActiveCard();
+      }
+
+      $(document).ready(function () {
+        // Center the gallery on the initial card
+        gallery.css(
+          "transform",
+          `translateX(${
+            -currentIndex * cardWidth + (gallery.width() / 2 - cardWidth / 2)
+          }px)`
+        );
+        updateActiveCard();
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".video-container").hover(
+          function () {
+            $(this).find("video")[0].play();
+          },
+          function () {
+            $(this).find("video")[0].pause();
+            $(this).find("video")[0].currentTime = 0;
+          }
+        );
+      });
+    </script>
+    <script>
+      document.addEventListener("scroll", function () {
+        var navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          // 50px kaydırma miktarı
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        var rascalsLogo = document.querySelector(".rascals-logo");
+        if (window.scrollY > 50) {
+          rascalsLogo.classList.add("scrolled");
+        } else {
+          rascalsLogo.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>

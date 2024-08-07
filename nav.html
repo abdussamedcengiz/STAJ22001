@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rascals</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-ihpGDRrqavKk1u7yWL6sMKNp7il1NzJW7kWbH4QETSp4PmYaBkK4F8eSO8fNdQtKl2zR5M9anG6ajuyx+sf5lA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .top-bar {
+        position: fixed;
+        width: 100%;
+        top: 10px;
+        z-index: 3;
+        background-color: white;
+        box-shadow: 0 4px 2px -2px gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+      }
+
+      .top-bar .location-selection,
+      .top-bar .continue-btn,
+      .top-bar .language-selection {
+        margin: 10px 10px;
+      }
+
+      .top-bar .location-selection,
+      .top-bar .continue-btn {
+        margin-right: auto;
+      }
+
+      .navbar {
+        background-color: transparent;
+        box-shadow: 0 4px 2px -2px gray;
+        z-index: 2;
+        transition: background-color 0.3s;
+        margin-top: 50px; /* Top-bar height */
+      }
+
+      .navbar.scrolled {
+        background-color: #fff;
+      }
+
+      .navbar-nav .nav-item {
+        margin-left: 15px;
+        margin-right: 15px;
+        position: relative; /* For submenu positioning */
+      }
+
+      .nav-link {
+        color: white !important;
+        transition: color 0.3s;
+        position: relative; /* For submenu positioning */
+      }
+
+      .navbar.scrolled .nav-link {
+        color: black !important;
+      }
+
+      .nav-link:hover {
+        color: inherit !important;
+      }
+
+      .navbar-brand .text-bg-primary {
+        color: white !important;
+        transition: color 0.3s;
+      }
+
+      .navbar.scrolled .text-bg-primary {
+        color: black !important;
+      }
+
+      .info-bar {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        top: 100px; /* Top-bar height */
+      }
+
+      .hero {
+        position: fixed;
+        height: 100vh;
+        text-align: center;
+        color: #fff;
+        margin-top: 156px; /* Navbar height + top-bar height */
+      }
+
+      .hero video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .hero .container {
+        position: fixed;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin-right: auto;
+      }
+
+      .hero h1 {
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        margin-bottom: 20px;
+      }
+
+      .btn-primary {
+        background-color: rgb(136, 103, 212);
+        border: none;
+        color: white;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .btn-primary .arrow {
+        margin-left: 5px;
+        transition: margin-left 0.3s ease-in-out;
+      }
+
+      .btn-primary:hover .arrow {
+        margin-left: 10px;
+      }
+
+      .product-card {
+        background-color: #ffffff;
+        border: none;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .product-card img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .product-card:hover {
+        transform: scale(1.05);
+      }
+
+      .product-card .card-body {
+        text-align: left;
+        padding: 20px;
+      }
+
+      .carousel-item {
+        text-align: center;
+        padding-bottom: 50px; /* Increased bottom padding for separation */
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        border: none;
+        color: white;
+        font-size: 24px;
+        z-index: 50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .carousel-control-prev {
+        left: 10px; /* Adjusted position */
+      }
+
+      .carousel-control-next {
+        right: 10px; /* Adjusted position */
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      .card-footer {
+        background-color: #ffffff;
+        padding: 10px;
+        text-align: left;
+        margin-top: -20px;
+      }
+
+      .small-text {
+        font-size: 12px;
+        position: relative;
+        padding-left: 80px;
+      }
+
+      .small-text::before {
+        content: "\2605 \2605 \2605 \2605 \2605 ";
+        color: #ffd700;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .video-container {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .video-container video {
+        width: 100%;
+        height: auto;
+      }
+
+      .video-container:hover video {
+        display: block;
+      }
+
+      .rascals-header {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: rgb(207, 241, 235);
+        padding: 5px 10px;
+        font-size: 10px;
+        border-radius: 10px;
+      }
+
+      .underline {
+        text-decoration: underline;
+      }
+
+      .navbar-nav {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .navbar-brand img {
+        height: 40px;
+      }
+
+      .aa {
+        margin-right: 200px;
+      }
+
+      /* Submenu styling */
+      .submenu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        background-color: white;
+        box-shadow: 0 4px 2px -2px gray;
+        z-index: 1000;
+        min-width: 200px;
+      }
+
+      .submenu a {
+        display: block;
+        padding: 10px 20px;
+        color: black;
+        text-decoration: none;
+      }
+
+      .submenu a:hover {
+        background-color: #f0f0f0;
+      }
+      .nav-look {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        z-index: 4;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-look.scrolled {
+        background-color: #333; /* Darker shade for scrolled effect */
+      }
+
+      .navbar {
+        margin-top: 10px; /* Space for the nav-look div */
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="top-bar d-flex justify-content-between align-items-center p-2 bg-light"
+    >
+      <div class="location-selection">
+        <div class="dropdown">
+          <div class="dropdown-menu" aria-labelledby="locationDropdown">
+            <a class="dropdown-item" href="#">Deutschland</a>
+            <a class="dropdown-item" href="#">United States</a>
+            <!-- Add more locations as needed -->
+          </div>
+        </div>
+      </div>
+      <div class="language-selection">
+        <div class="dropdown">
+          <span class="text-bg-primary p-3">Choose your location!</span>
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown button
+          </button>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="continue-btn">
+        <button class="btn btn-primary">
+          Continue <span class="arrow">→</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="images/Rascals.dde54c3a (1).svg" alt="Rascals Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active ml-2">
+            <a class="nav-link" href="#">Describe</a>
+          </li>
+          <li class="nav-item active ml-2">
+            <a class="nav-link" href="#">Training pants</a>
+          </li>
+
+          <li class="nav-item active mb-2">
+            <a class="nav-link" href="#" id="wipesMenu">
+              Wipes
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-down"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                />
+              </svg>
+            </a>
+            <div class="submenu" id="wipesSubmenu">
+              <a href="#">Option 1</a>
+              <a href="#">Option 2</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="navbar-brand me-2" href="#">
+              <img src="images/CocomelonLogo.avif" alt=" Logo" />
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Size Guide</a>
+          </li>
+        </ul>
+      </div>
+      <a class="navbar-brand" href="#">
+        <div class="continue-btn">
+          <span class="text-bg-primary p-3">United States</span>
+          <button class="btn btn-primary">
+            Shop <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="submenu">
+            <a href="#">Option 1</a>
+            <a href="#">Option 2</a>
+          </div>
+        </div>
+      </a>
+    </nav>
+
+    <!-- Info Bar -->
+
+    <div class="hero">
+      <video
+        class="video--element"
+        id="businessIntro"
+        playsinline
+        disableRemotePlayback
+        preload="auto"
+        muted
+        loop
+        autoplay
+      >
+        <source src="images/high.mp4" type="video/mp4" />
+      </video>
+      <div
+        class="container d-flex align-items-center justify-content-center"
+        style="height: 100%; margin-left: 13%"
+      >
+        <div class="text-center">
+          <h1>Meet Rascals</h1>
+          <p>The best at containing the mess</p>
+          <a href="#products" class="btn btn-primary">View Products</a>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Toggle submenu when clicking wipesMenu
+        $("#wipesMenu").click(function (e) {
+          e.preventDefault();
+          $("#wipesSubmenu").toggle();
+        });
+
+        // Close submenu when clicking outside
+        $(document).click(function (e) {
+          var target = e.target;
+          if (
+            !$(target).is("#wipesMenu") &&
+            !$(target).closest("#wipesSubmenu").length
+          ) {
+            $("#wipesSubmenu").hide();
+          }
+        });
+
+        // Change navbar text color on scroll
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 100) {
+            $(".navbar").addClass("scrolled");
+            $(".nav-link").addClass("scrolled");
+            $(".text-bg-primary").addClass("scrolled");
+          } else {
+            $(".navbar").removeClass("scrolled");
+            $(".nav-link").removeClass("scrolled");
+            $(".text-bg-primary").removeClass("scrolled");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+.product-card.active {
+  transform: scale(1.2); /* Büyütme efekti */
+  z-index: 10; /* Üzerinde olduğu kartı öne çıkar */
+}

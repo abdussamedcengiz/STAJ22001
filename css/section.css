@@ -1,0 +1,116 @@
+.best-at-containing-mess {
+  padding-top: 50px; /* İçeriği aşağı kaydırmak için */
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* İçeriği dikey olarak alt tarafa kaydırır */
+}
+
+.large-image {
+  width: 100%; /* Resmin genişliği konteynıra göre ayarlandı */
+  height: 100%; /* Yükseklik otomatik olarak ayarlanır */
+  object-fit: cover; /* Resmin kapsayıcıya uyumlu görünmesini sağlar */
+  border-radius: 10px; /* Kenarları yuvarlatma */
+}
+
+.center-text {
+  text-align: center;
+}
+
+.content-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.spaced-section {
+  padding-top: 60px; /* İçeriği aşağı kaydırmak için padding */
+}
+
+.btn-container {
+  text-align: start; /* Butonu ortala */
+  margin-top: 20px; /* Üstten boşluk bırak */
+}
+
+.btn-link,
+.btn-primary {
+  font-size: 0.8rem; /* Küçük font boyutu */
+  padding: 5px 15px; /* İç boşlukları ayarla */
+  border-radius: 5px; /* Buton köşelerini yuvarlatma */
+  display: inline-block; /* Satır içi blok */
+  text-align: center; /* Metni ortala */
+}
+
+.btn-primary {
+  background-color: rgb(136, 103, 212);
+  border: none;
+  color: white;
+}
+
+.btn-primary .arrow {
+  margin-left: 5px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.btn-primary:hover .arrow {
+  margin-left: 10px;
+}
+
+.carousel-item {
+  text-align: center;
+  border-radius: 40px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 24px;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card-footer {
+  background-color: #ffffff;
+  padding: 10px;
+  text-align: left;
+  border-radius: 100px;
+}
+
+.small-text {
+  font-size: 12px;
+  position: relative;
+  padding-left: 80px;
+}
+
+.small-text::before {
+  content: "\2605 \2605 \2605 \2605 \2605 ";
+  color: #ffd700;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Gallery</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .product-card {
+        background-color: #ffffff;
+        border-radius: 20px;
+        margin-bottom: 10px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .product-card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+        border: 2px solid #ddd;
+      }
+      .product-card:hover {
+        transform: scale(1.05);
+      }
+      .product-card .card-body {
+        text-align: left;
+        padding: 20px;
+        border-radius: 30px;
+      }
+      .carousel-item {
+        text-align: center;
+        border-radius: 40px;
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        border: none;
+        color: white;
+        font-size: 24px;
+        z-index: 50;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .carousel-control-prev {
+        left: 1200px;
+        margin-top: -310px;
+      }
+      .carousel-control-next {
+        right: 200px;
+        margin-top: -310px;
+      }
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+      .card-footer {
+        background-color: #ffffff;
+        padding: 10px;
+        text-align: left;
+        margin-top: -10px;
+        border-radius: 20px;
+      }
+      .small-text {
+        font-size: 12px;
+        position: relative;
+        padding-left: 80px;
+      }
+      .small-text::before {
+        content: "\2605 \2605 \2605 \2605 \2605 ";
+        color: #ffd700;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .btn-primary {
+        background-color: rgb(136, 103, 212);
+        border: none;
+        color: white;
+        display: inline-flex;
+        align-items: center;
+      }
+      .btn-primary .arrow {
+        margin-left: 5px;
+        transition: margin-left 0.3s ease-in-out;
+      }
+      .btn-primary:hover .arrow {
+        margin-left: 10px;
+      }
+      .video-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 20px;
+      }
+      .video-container video {
+        width: 100%;
+        height: auto;
+      }
+      .video-container:hover video {
+        display: block;
+      }
+      .rascals-header {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: rgb(207, 241, 235);
+        padding: 5px 10px;
+        font-size: 10px;
+        border-radius: 50px;
+      }
+      .underline {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container my-5">
+      <h2 class="text-center">Baby Products</h2>
+      <div class="carousel-control-wrapper">
+        <a
+          class="carousel-control-prev"
+          href="#productCarousel"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="arrow">←</span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#productCarousel"
+          role="button"
+          data-slide="next"
+        >
+          <span class="arrow">→</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div
+        id="productCarousel"
+        class="carousel slide"
+        data-ride="carousel"
+        data-interval="false"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card product-card">
+                  <div class="video-container">
+                    <div class="rascals-header">Our #1 Absorbing Diaper</div>
+                    <video
+                      class="video--element"
+                      id="businessIntro"
+                      playsinline="true"
+                      disableremoteplayback="true"
+                      preload="auto"
+                      muted=""
+                      loop=""
+                    >
+                      <source src="images/high (1).mp4.mp4" type="video/mp4;" />
+                    </video>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <p class="small-text underline">
+                    4.5/5 based on 17249 reviews
+                  </p>
+                  <h5 class="card-title">Premium Diapers</h5>
+                  <p class="card-text">From $19.97</p>
+                  <a href="#" class="btn btn-primary"
+                    >Shop Now <span class="arrow">→</span></a
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 position-relative">
+                <div class="card product-card">
+                  <div class="video-container">
+                    <div class="rascals-header">Our #1 Absorbing Diaper</div>
+                    <video
+                      class="video--element"
+                      id="businessIntro"
+                      playsinline="true"
+                      disableremoteplayback="true"
+                      preload="auto"
+                      muted=""
+                      loop=""
+                    >
+                      <source src="images/high (1).mp4.mp4" type="video/mp4;" />
+                    </video>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <p class="small-text underline">
+                    4.7/5 based on 3701 reviews
+                  </p>
+                  <h5 class="card-title">CoComelon Premium Training Pants</h5>
+                  <p class="card-text">From $19.97</p>
+                  <a href="#" class="btn btn-primary"
+                    >Shop Now <span class="arrow">→</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card product-card">
+                  <div class="video-container">
+                    <div class="rascals-header">Our #1 Absorbing Diaper</div>
+                    <video
+                      class="video--element"
+                      id="businessIntro"
+                      playsinline="true"
+                      disableremoteplayback="true"
+                      preload="auto"
+                      muted=""
+                      loop=""
+                    >
+                      <source src="images/high.mp4.mp4" type="video/mp4;" />
+                    </video>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <p class="small-text underline">
+                    4.8/5 based on 6500 reviews
+                  </p>
+                  <h5 class="card-title">Our Strongest Wipe</h5>
+                  <p class="card-text">From $19.97</p>
+                  <a href="#" class="btn btn-primary"
+                    >Shop Now <span class="arrow">→</span></a
+                  >
+                </div>
+              </div>
+              <div class="col-md-6 position-relative">
+                <div class="card product-card">
+                  <div class="video-container">
+                    <div class="rascals-header">Our #1 Absorbing Diaper</div>
+                    <video
+                      class="video--element"
+                      id="businessIntro"
+                      playsinline="true"
+                      disableremoteplayback="true"
+                      preload="auto"
+                      muted=""
+                      loop=""
+                    >
+                      <source src="images/high (1).mp4.mp4" type="video/mp4;" />
+                    </video>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <p class="small-text underline">
+                    4.9/5 based on 7200 reviews
+                  </p>
+                  <h5 class="card-title">Our Cleanest Wipe</h5>
+                  <p class="card-text">From $19.97</p>
+                  <a href="#" class="btn btn-primary"
+                    >Shop Now <span class="arrow">→</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".video-container").hover(
+          function () {
+            $(this).find("video")[0].play();
+          },
+          function () {
+            $(this).find("video")[0].pause();
+            $(this).find("video")[0].currentTime = 0;
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

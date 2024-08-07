@@ -1,0 +1,98 @@
+.row {
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.center-divider {
+  border-left: 1px solid #ddd;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+.footer-section {
+  text-align: center;
+}
+.footer-section h5 {
+  font-size: 0.9em;
+  padding-left: 60px;
+}
+.footer-section p {
+  font-size: 0.8em;
+  margin: 0;
+  padding-left: 70px; /* Links padding */
+}
+.rascals-text {
+  font-size: 2.5em; /* Increased font size */
+  font-weight: bold;
+  margin-top: 50px; /* Increased margin */
+  text-align: center;
+}
+.horizontal-divider {
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+  width: 100%;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+.input-group {
+  text-align: center;
+  right: 200px;
+  border-radius: 50px;
+  margin: 50px;
+  margin-top: 10px;
+  margin-bottom: 80px;
+  padding: 20px; /* Added padding */
+}
+.rascals-container {
+  margin-top: 50px; /* Increased margin */
+  margin-bottom: 50px; /* Increased margin */
+}
+.divider-container {
+  position: relative;
+}
+.email-input {
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+.email-input .form-control {
+  background-color: #003a48;
+  color: white; /* Text color changed to white */
+  border: 2px solid #7e5ccb; /* Added border */
+  border-radius: 25px 25px 0 25px;
+}
+.email-input button {
+  margin-left: -1px; /* Space between input and button */
+  background-color: #003a48;
+  padding: 10px 20px; /* Added padding */
+  border-radius: 25px 0 0 25px;
+}
+form {
+  padding: 20px; /* Added padding to the form */
+  margin: 25%px; /* Added margin to the form */
+  border-radius: 50px; /* Added border-radius to the form */
+  border-radius: 25px 0 0 25px;
+}
+.footer-section a {
+  display: block; /* Make links block elements for better vertical layout */
+  text-decoration: none;
+  color: white;
+  padding: 5px 0; /* Spacing between links */
+}
+.navbar-brandd img {
+  height: 100px;
+}

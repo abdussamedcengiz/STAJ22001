@@ -1,0 +1,325 @@
+.product-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #ddd;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+.product-card .card-body {
+  text-align: left;
+  padding: 20px;
+  border-radius: 30px;
+}
+.carousel-item {
+  text-align: center;
+  border-radius: 40px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 24px;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-control-prev {
+  left: 1200px;
+  margin-top: -310px;
+}
+.carousel-control-next {
+  right: 200px;
+  margin-top: -310px;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.card-footer {
+  background-color: #ffffff;
+  padding: 10px;
+  text-align: left;
+  margin-top: -10px;
+  border-radius: 20px;
+}
+.small-text {
+  font-size: 12px;
+  position: relative;
+  padding-left: 80px;
+}
+.small-text::before {
+  content: "\2605 \2605 \2605 \2605 \2605 ";
+  color: #ffd700;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.btn-primary {
+  background-color: rgb(136, 103, 212);
+  border: none;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-primary .arrow {
+  margin-left: 5px;
+  transition: margin-left 0.3s ease-in-out;
+}
+.btn-primary:hover .arrow {
+  margin-left: 10px;
+}
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+.video-container:hover video {
+  display: block;
+}
+.rascals-header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgb(207, 241, 235);
+  padding: 5px 10px;
+  font-size: 10px;
+  border-radius: 50px;
+}
+.underline {
+  text-decoration: underline;
+}
+.product-card {
+  background-color: #ffffff;
+  border-radius: 100px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+.product-card:hover {
+  transform: scale(1.05);
+}
+.product-card .card-body {
+  text-align: left;
+  padding: 20px;
+  border-radius: 30px;
+}
+.carousel-item {
+  text-align: center;
+  border-radius: 40px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 24px;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-control-prev {
+  left: 1090px;
+  margin-top: -400px;
+}
+.carousel-control-next {
+  right: 100px;
+  margin-top: -400px;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.card-footer {
+  background-color: #ffffff;
+  padding: 15px;
+  text-align: left;
+  margin-top: -20px;
+  border-radius: 100px;
+}
+.small-text {
+  font-size: 12px;
+  position: relative;
+  padding-left: 80px;
+}
+.small-text::before {
+  content: "\2605 \2605 \2605 \2605 \2605 ";
+  color: #ffd700;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.btn-primary {
+  background-color: rgb(136, 103, 212);
+  border: none;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-primary .arrow {
+  margin-left: 5px;
+  transition: margin-left 0.3s ease-in-out;
+}
+.btn-primary:hover .arrow {
+  margin-left: 10px;
+}
+.video-container {
+  position: relative;
+  overflow: hidden;
+}
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+.video-container:hover video {
+  display: block;
+}
+.rascals-header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgb(207, 241, 235);
+  padding: 5px 10px;
+  font-size: 10px;
+  border-radius: 50px;
+}
+.underline {
+  text-decoration: underline;
+}
+.product-card {
+  background-color: #ffffff;
+  border-radius: 100px;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease-in-out;
+}
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+.product-card:hover {
+  transform: scale(1.05);
+}
+.product-card .card-body {
+  text-align: left;
+  padding: 30px;
+  border-radius: 30px;
+}
+.carousel-item {
+  text-align: center;
+  border-radius: 40px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 24px;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-control-prev {
+  left: 1090px;
+  margin-top: -400px;
+}
+.carousel-control-next {
+  right: 100px;
+  margin-top: -400px;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.card-footer {
+  background-color: #ffffff;
+  padding-top: 40px;
+  text-align: left;
+  margin-top: 200px;
+  border-radius: 100px;
+}
+.small-text {
+  font-size: 12px;
+  position: relative;
+  padding-left: 80px;
+}
+.small-text::before {
+  content: "\2605 \2605 \2605 \2605 \2605 ";
+  color: #ffd700;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.btn-primary {
+  background-color: rgb(136, 103, 212);
+  border: none;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+}
+.btn-primary .arrow {
+  margin-left: 5px;
+  transition: margin-left 0.3s ease-in-out;
+}
+.btn-primary:hover .arrow {
+  margin-left: 10px;
+}
+.video-container {
+  position: relative;
+  overflow: hidden;
+}
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+.video-container:hover video {
+  display: block;
+}
+.rascals-header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgb(207, 241, 235);
+  padding: 5px 10px;
+  font-size: 10px;
+  border-radius: 50px;
+}
+.underline {
+  text-decoration: underline;
+}
